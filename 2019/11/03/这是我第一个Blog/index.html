@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JVM,Java," />
 
 
 
@@ -79,12 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。  7.1 概述什么是类加载机制  虚拟机把描述类的数据从Class文件加载进内存，并对数据进行校验，转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制； Java里天生可以动态扩展的语言特性  与那些在编译期需要进行连接工作的语言不同，在Java语言中，类型的加载，链接">
+<meta name="keywords" content="JVM,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这是我第一个Blog">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;%E8%BF%99%E6%98%AF%E6%88%91%E7%AC%AC%E4%B8%80%E4%B8%AABlog&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。  7.1 概述什么是类加载机制  虚拟机把描述类的数据从Class文件加载进内存，并对数据进行校验，转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制； Java里天生可以动态扩展的语言特性  与那些在编译期需要进行连接工作的语言不同，在Java语言中，类型的加载，链接">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AABlog&#x2F;%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
+<meta property="og:updated_time" content="2019-11-03T14:17:09.734Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AABlog&#x2F;%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
 
 
 
@@ -114,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/03/这是我第一个Blog/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>这是我第一个Blog | Hexo</title>
   
 
 
@@ -139,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -265,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/03/%E8%BF%99%E6%98%AF%E6%88%91%E7%AC%AC%E4%B8%80%E4%B8%AABlog/" itemprop="url">这是我第一个Blog</a></h1>
+          <h1 class="post-title" itemprop="name headline">这是我第一个Blog</h1>
         
 
         <div class="post-meta">
@@ -317,9 +320,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。</p>
 </blockquote>
 <h3 id="7-1-概述"><a href="#7-1-概述" class="headerlink" title="7.1 概述"></a>7.1 概述</h3><p><strong>什么是类加载机制</strong><br>  虚拟机把描述类的数据从Class文件加载进内存，并对数据进行校验，转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制；</p>
@@ -414,8 +415,6 @@
 <p>接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 <clinit>() 方法。但接口与类不同的是，执行接口的 <clinit>() 方法不需要先执行父接口的 <clinit>() 方法。只有当父接口中定义的变量使用时，父接口才会初始化。另外，接口的实现类在初始化时也一样不会执行接口的 <clinit>() 方法。</p>
 <p>虚拟机会保证一个类的 <clinit>() 方法在多线程环境下被正确的加锁和同步，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 <clinit>() 方法，其它线程都会阻塞等待，直到活动线程执行 <clinit>() 方法完毕。如果在一个类的 <clinit>() 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。</p>
 <h3 id="7-4-类加载器"><a href="#7-4-类加载器" class="headerlink" title="7.4 类加载器"></a>7.4 类加载器</h3>
-          
-        
       
     </div>
     
@@ -430,146 +429,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/03/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-03T21:50:57+08:00">
-                2019-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
           
-            
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/03/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -579,10 +470,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -590,6 +482,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -610,8 +506,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -662,6 +567,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-概述"><span class="nav-number">1.</span> <span class="nav-text">7.1 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-类加载的时机"><span class="nav-number">2.</span> <span class="nav-text">7.2 类加载的时机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类加载生命周期"><span class="nav-number">2.1.</span> <span class="nav-text">类加载生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开始顺序"><span class="nav-number">2.2.</span> <span class="nav-text">开始顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类初始化时机"><span class="nav-number">2.3.</span> <span class="nav-text">类初始化时机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主动引用"><span class="nav-number">2.4.</span> <span class="nav-text">主动引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被动引用"><span class="nav-number">2.5.</span> <span class="nav-text">被动引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口加载与类加载过程的区别"><span class="nav-number">2.6.</span> <span class="nav-text">接口加载与类加载过程的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-类加载的过程"><span class="nav-number">3.</span> <span class="nav-text">7.3 类加载的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-1-加载"><span class="nav-number">3.1.</span> <span class="nav-text">7.3.1 加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-2-验证"><span class="nav-number">3.2.</span> <span class="nav-text">7.3.2 验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-3-准备"><span class="nav-number">3.3.</span> <span class="nav-text">7.3.3 准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-4解析"><span class="nav-number">3.4.</span> <span class="nav-text">7.3.4解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-5-初始化"><span class="nav-number">3.5.</span> <span class="nav-text">7.3.5 初始化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-类加载器"><span class="nav-number">4.</span> <span class="nav-text">7.4 类加载器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -795,6 +716,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
